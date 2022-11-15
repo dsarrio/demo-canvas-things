@@ -220,8 +220,8 @@ class Demo {
             }
             if (e.code === 'Numpad0') demo.FX.Sound.audio.currentTime = 0;
             if (e.code === 'Numpad1') demo.FX.Sound.audio.currentTime = 6.5;
-            if (e.code == 'Numpad2') demo.FX.Sound.audio.currentTime = 56.5;
-            if (e.code == 'Numpad3') demo.FX.Sound.audio.currentTime = 96.5;
+            if (e.code === 'Numpad2') demo.FX.Sound.audio.currentTime = 56.5;
+            if (e.code === 'Numpad3') demo.FX.Sound.audio.currentTime = 96.5;
             if (e.code == 'Numpad4') demo.FX.Sound.audio.currentTime = 126.5;
             if (e.code == 'Numpad5') demo.FX.Sound.audio.currentTime = 186.5;
             if (e.code == 'Numpad6') demo.FX.Sound.audio.currentTime = 237.5;

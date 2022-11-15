@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "live-server --port=4200 --no-browser src/",
-    "pack": "node scripts/pack.js && google-closure-compiler -O SIMPLE --js build/aliased.js --js_output_file release/script.js"
+    "release": "node scripts/pack.js && google-closure-compiler -O SIMPLE --js .build/aliased.js --js_output_file release/script.js"
   },
   "author": "David Sarrio",
   "license": "ISC",

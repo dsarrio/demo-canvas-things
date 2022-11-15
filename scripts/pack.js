@@ -37,20 +37,20 @@ const renames = {
     //'const': 'let',
 }
 
-// fs.rmSync('build', { recursive: true, force: true });
-// fs.mkdirSync('build');  
+fs.rmSync('.build', { recursive: true, force: true });
+fs.mkdirSync('.build');  
 
-fs.rmSync('build/packed.js', { force: true });
+fs.rmSync('.build/packed.js', { force: true });
 for (var file of files) {
     var content = fs.readFileSync(file).toString('utf8');
     Object.keys(renames).forEach(k => {
         content = content.replaceAll(k, renames[k]);
     });
-    fs.appendFileSync('build/packed.js', content);
+    fs.appendFileSync('.build/packed.js', content);
 }
 
-fs.rmSync('build/aliased.js', { force: true });
+fs.rmSync('.build/aliased.js', { force: true });
 Object.keys(aliases).forEach(k => {
-    fs.appendFileSync('build/aliased.js', aliases[k]+'='+k+';');
+    fs.appendFileSync('.build/aliased.js', aliases[k]+'='+k+';');
 });
-fs.appendFileSync('build/aliased.js', fs.readFileSync('build/packed.js'));
+fs.appendFileSync('.build/aliased.js', fs.readFileSync('.build/packed.js'));

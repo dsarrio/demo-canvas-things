@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Things</title>
+    <link href='https://fonts.googleapis.com/css?family=Vibur:400' rel='stylesheet' type='text/css'>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            background-color: #000;
+            color: #fff;
+            font: 1.2em sans-serif;
+            overflow: hidden;
+            text-align: center;
+        }
+        h2 {
+            margin-top: 80px;
+            font-size: 56px;
+        }
+        .neon {
+            color: #fff;
+            text-shadow:
+                0 0 5px rgb(250, 235, 235),
+                0 0 10px rgb(250, 235, 235),
+                0 0 21px rgb(250, 235, 235),
+                0 0 42px #f00,
+                0 0 82px #00f,
+                0 0 92px #00f,
+                0 0 102px #00f,
+                0 0 151px #00f;
+            font-family: "Vibur", sans-serif;
+            animation: pulsate 0.11s ease-in-out infinite alternate;    
+        }
+        canvas {
+            cursor: none;
+        }
+        .notice {
+            max-width: 600px;
+            margin: 60px auto 40px auto;
+            font-size: 0.9em;
+            text-align: justify;
+        }
+        button {
+            min-width: 180px;
+            font-size: 0.8em;
+            background-color: #000;
+            border-color: #fff;
+            border-radius: 8px;
+            color: #fff;
+            padding: 5px;
+            margin-top: 10px;
+        }
+        button:hover{
+            background-color: #000033;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="neon">Canvas Things</h2>
+    <h5 class="neon">42KB</h5>
+    <div class="notice">
+        This demo uses pure javascript and native browser capabilities, everything is rendered using Canvas 2D api (so no WebGL).
+        Also no external media ressources are used as everything is proceduraly generated and processed in real time.
+        <br><br>
+        Please, ensure you have closed any other tab or applications and that your sound is turned on for optimal experience.
+    </div>
+    <div>
+        <button onclick="demo.runFullscreen()">Start</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
